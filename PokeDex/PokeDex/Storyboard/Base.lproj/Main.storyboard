@@ -76,9 +76,16 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tl-rX-qcr">
+                                <rect key="frame" x="87" y="187" width="240" height="240"/>
+                                <connections>
+                                    <action selector="shinyButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="wHH-Ff-6rC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="5Tl-rX-qcr" firstAttribute="width" secondItem="V6f-vG-bLV" secondAttribute="width" id="15p-RP-ZTS"/>
                             <constraint firstItem="EmB-va-v79" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="7kq-e9-0nB"/>
                             <constraint firstItem="EmB-va-v79" firstAttribute="top" secondItem="wJ8-3p-pFR" secondAttribute="top" id="9ge-me-jb8"/>
                             <constraint firstItem="fIk-VB-jNF" firstAttribute="width" secondItem="6fH-Ad-fQg" secondAttribute="width" id="BQ5-7t-2xn"/>
@@ -87,10 +94,13 @@
                             <constraint firstItem="EK2-37-H8B" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="J8R-JR-Hqa"/>
                             <constraint firstItem="EK2-37-H8B" firstAttribute="top" secondItem="EmB-va-v79" secondAttribute="bottom" symbolic="YES" id="Kf5-pp-OZn"/>
                             <constraint firstItem="V6f-vG-bLV" firstAttribute="centerX" secondItem="EK2-37-H8B" secondAttribute="centerX" id="QFR-ws-KoJ"/>
+                            <constraint firstItem="5Tl-rX-qcr" firstAttribute="centerX" secondItem="V6f-vG-bLV" secondAttribute="centerX" id="Vmi-Nm-Rfc"/>
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="top" secondItem="EK2-37-H8B" secondAttribute="bottom" constant="8" id="Ydc-5s-CNK"/>
                             <constraint firstItem="V6f-vG-bLV" firstAttribute="width" secondItem="EK2-37-H8B" secondAttribute="width" multiplier="0.57971" id="af5-Z2-D6b"/>
                             <constraint firstItem="V6f-vG-bLV" firstAttribute="centerY" secondItem="EK2-37-H8B" secondAttribute="centerY" id="dPg-fE-VTZ"/>
                             <constraint firstItem="EK2-37-H8B" firstAttribute="width" secondItem="mof-9A-9Sc" secondAttribute="width" id="ePJ-6Y-U94"/>
+                            <constraint firstItem="5Tl-rX-qcr" firstAttribute="height" secondItem="V6f-vG-bLV" secondAttribute="height" id="fI6-lr-sM0"/>
+                            <constraint firstItem="5Tl-rX-qcr" firstAttribute="centerY" secondItem="V6f-vG-bLV" secondAttribute="centerY" id="iNg-GO-1Cd"/>
                             <constraint firstItem="fIk-VB-jNF" firstAttribute="top" secondItem="6fH-Ad-fQg" secondAttribute="bottom" constant="25" id="ijY-5z-u5P"/>
                             <constraint firstItem="EmB-va-v79" firstAttribute="width" secondItem="mof-9A-9Sc" secondAttribute="width" id="kkX-3z-hz7"/>
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="width" secondItem="mof-9A-9Sc" secondAttribute="width" multiplier="0.9" id="pgK-NV-KBq"/>
@@ -103,6 +113,7 @@
                         <outlet property="nameLabel" destination="6fH-Ad-fQg" id="1dg-Nx-acD"/>
                         <outlet property="pokeSearchBar" destination="EmB-va-v79" id="0IA-xU-8Lf"/>
                         <outlet property="spriteImageView" destination="V6f-vG-bLV" id="bVz-eZ-hp6"/>
+                        <outlet property="toggleIsShinyButton" destination="5Tl-rX-qcr" id="GR1-Mn-fEJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1j-cU-hYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

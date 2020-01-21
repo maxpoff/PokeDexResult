@@ -25,9 +25,11 @@ struct Pokemon: Decodable {
     struct Sprites: Decodable {
         
         let classic: URL
+        let shinySprite: URL
         
         enum CodingKeys: String, CodingKey {
             case classic = "front_default"
+            case shinySprite = "front_shiny"
         }//End of enum
         
     }//End of struct

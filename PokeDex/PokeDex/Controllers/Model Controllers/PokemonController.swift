@@ -53,7 +53,23 @@ class PokemonController {
             completion(.success(image))
             
         }.resume()
-        
     }
     
+    static func fetchShinySprite(for pokemon: Pokemon, completion: @escaping (Result<UIImage, PokemonError>) -> Void) {
+        
+        let url = pokemon.sprites.shinySprite
+        
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            
+            if let error = error {
+                return completion(.failure(.thrownError(error)))
+            }
+            
+            guard let data = data else {return completion(.failure(.noData))}
+            
+            guard let image = UIImage(data: data) else {return completion(.failure(.unableToDecode))}
+            completion(.success(image))
+            
+        }.resume()
+    }
 }//End of class
