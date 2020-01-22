@@ -12,15 +12,15 @@ struct Pokemon: Decodable {
     
     let name: String
     let id: Int
-    let baseXP: Int
     let sprites: Sprites
+    let typeArray: [Types]
     
     enum CodingKeys: String, CodingKey {
         case name
         case id
-        case baseXP = "base_experience"
         case sprites
-    }
+        case typeArray = "types"
+    }//End of enum
     
     struct Sprites: Decodable {
         
@@ -34,4 +34,14 @@ struct Pokemon: Decodable {
         
     }//End of struct
     
-}//End of class
+    struct Types: Decodable {
+        
+        let slot: Int
+        let type: pokemonType
+    }//End of struct
+    
+    struct pokemonType: Decodable {
+        let name: String
+    }//End of struct
+    
+}//End of struct

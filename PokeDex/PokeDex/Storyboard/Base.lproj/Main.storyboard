@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-37-H8B">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-37-H8B">
                                 <rect key="frame" x="0.0" y="100" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EK2-37-H8B" secondAttribute="height" multiplier="1:1" id="F4j-Wd-tC0"/>
@@ -31,25 +31,25 @@
                                     <constraint firstAttribute="width" secondItem="V6f-vG-bLV" secondAttribute="height" multiplier="1:1" id="KOl-FZ-yGZ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-Ad-fQg">
-                                <rect key="frame" x="20.5" y="522" width="373" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search For Your Favorite Pokemon!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-Ad-fQg">
+                                <rect key="frame" x="20.5" y="522" width="373" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIk-VB-jNF">
-                                <rect key="frame" x="20.5" y="547" width="373" height="117"/>
+                                <rect key="frame" x="20.5" y="642.5" width="373" height="117"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="KO5-VF-kus">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base XP:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFp-Ug-vEh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFp-Ug-vEh">
                                                 <rect key="frame" x="0.0" y="0.0" width="172.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-Jg-4Nj">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-Jg-4Nj" userLabel="typeLabel">
                                                 <rect key="frame" x="200.5" y="0.0" width="172.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
@@ -60,7 +60,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-4O-C7f">
                                         <rect key="frame" x="0.0" y="67" width="373" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyh-sp-14t">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyh-sp-14t">
                                                 <rect key="frame" x="0.0" y="0.0" width="172.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
@@ -108,12 +108,15 @@
                         <viewLayoutGuide key="safeArea" id="wJ8-3p-pFR"/>
                     </view>
                     <connections>
-                        <outlet property="baseXPLabel" destination="Xx4-Jg-4Nj" id="PLU-Gv-8m8"/>
+                        <outlet property="backgroundImage" destination="EK2-37-H8B" id="OSw-8p-KFP"/>
                         <outlet property="idLAbel" destination="hTx-ba-fNW" id="vr1-nS-LgU"/>
                         <outlet property="nameLabel" destination="6fH-Ad-fQg" id="1dg-Nx-acD"/>
                         <outlet property="pokeSearchBar" destination="EmB-va-v79" id="0IA-xU-8Lf"/>
+                        <outlet property="populateID" destination="Jyh-sp-14t" id="Wv6-UE-Lsi"/>
+                        <outlet property="populateType" destination="KFp-Ug-vEh" id="Iq0-Ku-NLh"/>
                         <outlet property="spriteImageView" destination="V6f-vG-bLV" id="bVz-eZ-hp6"/>
                         <outlet property="toggleIsShinyButton" destination="5Tl-rX-qcr" id="GR1-Mn-fEJ"/>
+                        <outlet property="typeLabel" destination="Xx4-Jg-4Nj" id="wWM-Ir-npC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1j-cU-hYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -122,6 +125,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundImage" width="313" height="161"/>
+        <image name="Pokedex" width="630" height="630"/>
     </resources>
 </document>

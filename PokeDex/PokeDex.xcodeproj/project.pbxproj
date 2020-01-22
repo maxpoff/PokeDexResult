@@ -17,6 +17,8 @@
 		97196C9323D7748300EEE6FD /* PokemonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196C9223D7748300EEE6FD /* PokemonError.swift */; };
 		97196C9523D784E800EEE6FD /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196C9423D784E800EEE6FD /* PokemonViewController.swift */; };
 		97196C9823D788C100EEE6FD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196C9723D788C100EEE6FD /* UIViewControllerExtension.swift */; };
+		97196C9A23D7CB6D00EEE6FD /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196C9923D7CB6D00EEE6FD /* StringFormatter.swift */; };
+		97196C9C23D7CD7700EEE6FD /* BackgroundChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196C9B23D7CD7700EEE6FD /* BackgroundChanger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		97196C9223D7748300EEE6FD /* PokemonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonError.swift; sourceTree = "<group>"; };
 		97196C9423D784E800EEE6FD /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		97196C9723D788C100EEE6FD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		97196C9923D7CB6D00EEE6FD /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
+		97196C9B23D7CD7700EEE6FD /* BackgroundChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundChanger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				97196C9723D788C100EEE6FD /* UIViewControllerExtension.swift */,
+				97196C9923D7CB6D00EEE6FD /* StringFormatter.swift */,
+				97196C9B23D7CD7700EEE6FD /* BackgroundChanger.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -218,8 +224,10 @@
 				97196C7623D7692000EEE6FD /* SceneDelegate.swift in Sources */,
 				97196C9523D784E800EEE6FD /* PokemonViewController.swift in Sources */,
 				97196C8F23D76C8C00EEE6FD /* Pokemon.swift in Sources */,
+				97196C9A23D7CB6D00EEE6FD /* StringFormatter.swift in Sources */,
 				97196C9123D7736B00EEE6FD /* PokemonController.swift in Sources */,
 				97196C9823D788C100EEE6FD /* UIViewControllerExtension.swift in Sources */,
+				97196C9C23D7CD7700EEE6FD /* BackgroundChanger.swift in Sources */,
 				97196C9323D7748300EEE6FD /* PokemonError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,9 +14,12 @@ class PokemonViewController: UIViewController {
     @IBOutlet weak var pokeSearchBar: UISearchBar!
     @IBOutlet weak var spriteImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var baseXPLabel: UILabel!
     @IBOutlet weak var idLAbel: UILabel!
     @IBOutlet weak var toggleIsShinyButton: UIButton!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var populateType: UILabel!
+    @IBOutlet weak var populateID: UILabel!
     
     var pokemon: Pokemon?
     var isShiny = false
@@ -47,10 +50,18 @@ class PokemonViewController: UIViewController {
                 
                 switch result {
                 case .success(let sprite):
-                    self.nameLabel.text = pokemon.name
-                    self.baseXPLabel.text = "\(pokemon.baseXP)"
+                    self.nameLabel.text = pokemon.name.capitalizingFirstLetter()
                     self.idLAbel.text = "\(pokemon.id)"
                     self.spriteImageView.image = sprite
+                    self.populateType.text = "Type:"
+                    self.populateID.text = "ID:"
+                    
+                    for type in pokemon.typeArray {
+                        if type.slot == 1 {
+                            self.typeLabel.text = type.type.name.capitalizingFirstLetter()
+                            self.backgroundChange()
+                        }
+                    }
                     
                 case .failure(let error):
                     self.presentErrorToUser(localizedError: error)
@@ -66,9 +77,6 @@ class PokemonViewController: UIViewController {
                 
                 switch result {
                 case .success(let shinySprite):
-                    self.nameLabel.text = pokemon.name
-                    self.baseXPLabel.text = "\(pokemon.baseXP)"
-                    self.idLAbel.text = "\(pokemon.id)"
                     self.spriteImageView.image = shinySprite
                     
                 case .failure(let error):
@@ -76,6 +84,12 @@ class PokemonViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func backgroundChange() {
+        guard let textLabelText = typeLabel.text else {return}
+        let background = "\(textLabelText)Background"
+        backgroundImage.image = UIImage(named: String(background))
     }
     
 }//End of class
@@ -95,6 +109,7 @@ extension PokemonViewController: UISearchBarDelegate {
                 case .success(let pokemon):
                     self.fetchSpriteAndUpdateViews(for: pokemon)
                     self.pokemon = pokemon
+                    searchBar.text = ""
                 case .failure(let error):
                     self.presentErrorToUser(localizedError: error)
                 }
