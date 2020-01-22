@@ -20,12 +20,17 @@ class PokemonViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var populateType: UILabel!
     @IBOutlet weak var populateID: UILabel!
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var pokemon: Pokemon?
     var isShiny = false
+    var idNumber: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        designNextButton()
+        designPreviousButton()
         pokeSearchBar.delegate = self
     }
     
@@ -41,6 +46,42 @@ class PokemonViewController: UIViewController {
         isShiny.toggle()
     }//End of action
     
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        guard var idNumber = idNumber else {return}
+        idNumber += 1
+        let idNumberAsString = String(idNumber)
+        PokemonController.fetchPokemon(for: idNumberAsString) { (result) in
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let pokemon):
+                    self.fetchSpriteAndUpdateViews(for: pokemon)
+                    self.pokemon = pokemon
+                case .failure:
+                    self.presentNoPokemonError()
+                }
+            }
+        }
+    }
+    
+    @IBAction func previousButtonTapped(_ sender: Any) {
+        guard var idNumber = idNumber else {return}
+        idNumber -= 1
+        let idNumberAsString = String(idNumber)
+        PokemonController.fetchPokemon(for: idNumberAsString) { (result) in
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let pokemon):
+                    self.fetchSpriteAndUpdateViews(for: pokemon)
+                    self.pokemon = pokemon
+                case .failure:
+                    self.presentNoPokemonError()
+                }
+            }
+        }
+    }
+    
     //MARK: Private Methods
     
     private func fetchSpriteAndUpdateViews(for pokemon: Pokemon) {
@@ -55,6 +96,7 @@ class PokemonViewController: UIViewController {
                     self.spriteImageView.image = sprite
                     self.populateType.text = "Type:"
                     self.populateID.text = "ID:"
+                    self.idNumber = pokemon.id
                     
                     for type in pokemon.typeArray {
                         if type.slot == 1 {
@@ -92,6 +134,24 @@ class PokemonViewController: UIViewController {
         backgroundImage.image = UIImage(named: String(background))
     }
     
+    func designNextButton() {
+        nextButton.layer.borderWidth = 2
+        nextButton.layer.borderColor = UIColor.black.cgColor
+        nextButton.layer.cornerRadius = nextButton.frame.height / 3
+        nextButton.backgroundColor = #colorLiteral(red: 0.9457877278, green: 0.4133938849, blue: 0.3941661119, alpha: 1)
+        nextButton.setTitleColor(.black, for: .normal)
+        nextButton.setTitle("Next Pokemon", for: .normal)
+    }
+    
+    func designPreviousButton() {
+        previousButton.layer.borderWidth = 2
+        previousButton.layer.borderColor = UIColor.black.cgColor
+        previousButton.layer.cornerRadius = previousButton.frame.height / 3
+        previousButton.backgroundColor = #colorLiteral(red: 0.9457877278, green: 0.4133938849, blue: 0.3941661119, alpha: 1)
+        previousButton.setTitleColor(.black, for: .normal)
+        previousButton.setTitle("Previous Pokemon", for: .normal)
+    }
+
 }//End of class
 
 //MARK: - UISearchBar Delegate

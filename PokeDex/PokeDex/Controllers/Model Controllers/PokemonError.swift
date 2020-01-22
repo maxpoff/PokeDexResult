@@ -20,7 +20,8 @@ enum PokemonError: LocalizedError {
         case .invalidURL:
             return "Unable to reach the server"
         case .thrownError(let error):
-            return error.localizedDescription
+            print(error.localizedDescription)
+            return "Sorry, that Pokemon does not exist...yet" + "\n" + "Please check your spelling or ID number and try again"
         case .noData:
             return "The server responded with no data"
         case .unableToDecode:

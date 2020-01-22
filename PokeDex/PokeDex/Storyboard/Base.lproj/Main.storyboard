@@ -45,13 +45,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFp-Ug-vEh">
                                                 <rect key="frame" x="0.0" y="0.0" width="172.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-Jg-4Nj" userLabel="typeLabel">
                                                 <rect key="frame" x="200.5" y="0.0" width="172.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -62,13 +62,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyh-sp-14t">
                                                 <rect key="frame" x="0.0" y="0.0" width="172.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-ba-fNW">
                                                 <rect key="frame" x="200.5" y="0.0" width="172.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -82,6 +82,22 @@
                                     <action selector="shinyButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="wHH-Ff-6rC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4q-aG-EWV">
+                                <rect key="frame" x="344" y="834" width="69" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="Uhg-UL-40e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP4-5C-kZc">
+                                <rect key="frame" x="1" y="834" width="69" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="previousButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="DCs-xT-nlX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -92,8 +108,11 @@
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="ERh-D7-kTL"/>
                             <constraint firstItem="fIk-VB-jNF" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="IDu-JN-FNz"/>
                             <constraint firstItem="EK2-37-H8B" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="J8R-JR-Hqa"/>
+                            <constraint firstItem="iP4-5C-kZc" firstAttribute="leading" secondItem="mof-9A-9Sc" secondAttribute="leading" constant="1" id="K32-Sc-TfC"/>
                             <constraint firstItem="EK2-37-H8B" firstAttribute="top" secondItem="EmB-va-v79" secondAttribute="bottom" symbolic="YES" id="Kf5-pp-OZn"/>
+                            <constraint firstItem="I4q-aG-EWV" firstAttribute="bottom" secondItem="wJ8-3p-pFR" secondAttribute="bottom" id="PST-BW-uOQ"/>
                             <constraint firstItem="V6f-vG-bLV" firstAttribute="centerX" secondItem="EK2-37-H8B" secondAttribute="centerX" id="QFR-ws-KoJ"/>
+                            <constraint firstItem="iP4-5C-kZc" firstAttribute="bottom" secondItem="wJ8-3p-pFR" secondAttribute="bottom" id="Sac-FD-vsf"/>
                             <constraint firstItem="5Tl-rX-qcr" firstAttribute="centerX" secondItem="V6f-vG-bLV" secondAttribute="centerX" id="Vmi-Nm-Rfc"/>
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="top" secondItem="EK2-37-H8B" secondAttribute="bottom" constant="8" id="Ydc-5s-CNK"/>
                             <constraint firstItem="V6f-vG-bLV" firstAttribute="width" secondItem="EK2-37-H8B" secondAttribute="width" multiplier="0.57971" id="af5-Z2-D6b"/>
@@ -103,7 +122,9 @@
                             <constraint firstItem="5Tl-rX-qcr" firstAttribute="centerY" secondItem="V6f-vG-bLV" secondAttribute="centerY" id="iNg-GO-1Cd"/>
                             <constraint firstItem="fIk-VB-jNF" firstAttribute="top" secondItem="6fH-Ad-fQg" secondAttribute="bottom" constant="25" id="ijY-5z-u5P"/>
                             <constraint firstItem="EmB-va-v79" firstAttribute="width" secondItem="mof-9A-9Sc" secondAttribute="width" id="kkX-3z-hz7"/>
+                            <constraint firstItem="wJ8-3p-pFR" firstAttribute="trailing" secondItem="I4q-aG-EWV" secondAttribute="trailing" constant="1" id="kzS-7H-jQE"/>
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="width" secondItem="mof-9A-9Sc" secondAttribute="width" multiplier="0.9" id="pgK-NV-KBq"/>
+                            <constraint firstItem="I4q-aG-EWV" firstAttribute="width" secondItem="iP4-5C-kZc" secondAttribute="width" id="xQz-aV-c2l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wJ8-3p-pFR"/>
                     </view>
@@ -111,9 +132,11 @@
                         <outlet property="backgroundImage" destination="EK2-37-H8B" id="OSw-8p-KFP"/>
                         <outlet property="idLAbel" destination="hTx-ba-fNW" id="vr1-nS-LgU"/>
                         <outlet property="nameLabel" destination="6fH-Ad-fQg" id="1dg-Nx-acD"/>
+                        <outlet property="nextButton" destination="I4q-aG-EWV" id="67L-2O-rst"/>
                         <outlet property="pokeSearchBar" destination="EmB-va-v79" id="0IA-xU-8Lf"/>
                         <outlet property="populateID" destination="Jyh-sp-14t" id="Wv6-UE-Lsi"/>
                         <outlet property="populateType" destination="KFp-Ug-vEh" id="Iq0-Ku-NLh"/>
+                        <outlet property="previousButton" destination="iP4-5C-kZc" id="lYl-Bj-HFp"/>
                         <outlet property="spriteImageView" destination="V6f-vG-bLV" id="bVz-eZ-hp6"/>
                         <outlet property="toggleIsShinyButton" destination="5Tl-rX-qcr" id="GR1-Mn-fEJ"/>
                         <outlet property="typeLabel" destination="Xx4-Jg-4Nj" id="wWM-Ir-npC"/>
@@ -121,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1j-cU-hYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="19"/>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
         </scene>
     </scenes>
     <resources>

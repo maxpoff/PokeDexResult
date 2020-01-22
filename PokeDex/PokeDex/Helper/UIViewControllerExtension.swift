@@ -18,6 +18,15 @@ extension UIViewController {
         alertController.addAction(dismissAction)
         
         present(alertController, animated: true)
+    }
+    
+    func presentNoPokemonError() {
+        let alertController = UIAlertController(title: "Who's that Pokemon?", message: "Sorry, that Pokemon does not exist...yet", preferredStyle: .alert)
         
+        let dismissAction = UIAlertAction(title: "Ok", style: .cancel)
+        
+        alertController.addAction(dismissAction)
+        
+        present(alertController, animated: true)
     }
 }//End of extension
