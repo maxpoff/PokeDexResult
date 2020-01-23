@@ -14,6 +14,16 @@ struct Pokemon: Decodable {
     let id: Int
     let sprites: Sprites
     let typeArray: [Types]
+    var detailArray: [String] {
+        var placeholderArray: [String] = []
+        placeholderArray.append("ID: \(id)")
+        for type in typeArray {
+            if type.slot == 1 {
+                placeholderArray.append("Type: \(type.type.name.capitalizingFirstLetter())")
+            }
+        }
+        return placeholderArray
+    }
     
     enum CodingKeys: String, CodingKey {
         case name

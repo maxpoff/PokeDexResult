@@ -82,20 +82,36 @@
                                     <action selector="shinyButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="wHH-Ff-6rC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4q-aG-EWV">
-                                <rect key="frame" x="344" y="834" width="69" height="28"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="Uhg-UL-40e"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP4-5C-kZc">
-                                <rect key="frame" x="1" y="834" width="69" height="28"/>
+                                <rect key="frame" x="20" y="813" width="69" height="28"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Previous"/>
                                 <connections>
                                     <action selector="previousButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="DCs-xT-nlX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Y-WL-ddn">
+                                <rect key="frame" x="172" y="792" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="LiA-Us-vef"/>
+                                    <constraint firstAttribute="height" constant="70" id="pwE-EE-2oc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="More Info" image="pokeball"/>
+                                <connections>
+                                    <segue destination="5za-xN-lu2" kind="show" identifier="toDetailVC" id="tcr-bk-4ui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4q-aG-EWV">
+                                <rect key="frame" x="325" y="813" width="69" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="9q6-Vi-HHu"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="Cio-Tv-w4m" eventType="touchUpInside" id="Uhg-UL-40e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,14 +121,15 @@
                             <constraint firstItem="EmB-va-v79" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="7kq-e9-0nB"/>
                             <constraint firstItem="EmB-va-v79" firstAttribute="top" secondItem="wJ8-3p-pFR" secondAttribute="top" id="9ge-me-jb8"/>
                             <constraint firstItem="fIk-VB-jNF" firstAttribute="width" secondItem="6fH-Ad-fQg" secondAttribute="width" id="BQ5-7t-2xn"/>
+                            <constraint firstItem="wJ8-3p-pFR" firstAttribute="bottom" secondItem="Y7Y-WL-ddn" secondAttribute="bottom" id="Bae-cw-6HV"/>
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="ERh-D7-kTL"/>
                             <constraint firstItem="fIk-VB-jNF" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="IDu-JN-FNz"/>
                             <constraint firstItem="EK2-37-H8B" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="J8R-JR-Hqa"/>
-                            <constraint firstItem="iP4-5C-kZc" firstAttribute="leading" secondItem="mof-9A-9Sc" secondAttribute="leading" constant="1" id="K32-Sc-TfC"/>
+                            <constraint firstItem="wJ8-3p-pFR" firstAttribute="trailing" secondItem="I4q-aG-EWV" secondAttribute="trailing" constant="20" id="JlJ-3g-eaD"/>
+                            <constraint firstItem="iP4-5C-kZc" firstAttribute="leading" secondItem="mof-9A-9Sc" secondAttribute="leading" constant="20" id="K32-Sc-TfC"/>
                             <constraint firstItem="EK2-37-H8B" firstAttribute="top" secondItem="EmB-va-v79" secondAttribute="bottom" symbolic="YES" id="Kf5-pp-OZn"/>
-                            <constraint firstItem="I4q-aG-EWV" firstAttribute="bottom" secondItem="wJ8-3p-pFR" secondAttribute="bottom" id="PST-BW-uOQ"/>
                             <constraint firstItem="V6f-vG-bLV" firstAttribute="centerX" secondItem="EK2-37-H8B" secondAttribute="centerX" id="QFR-ws-KoJ"/>
-                            <constraint firstItem="iP4-5C-kZc" firstAttribute="bottom" secondItem="wJ8-3p-pFR" secondAttribute="bottom" id="Sac-FD-vsf"/>
+                            <constraint firstItem="Y7Y-WL-ddn" firstAttribute="centerX" secondItem="wJ8-3p-pFR" secondAttribute="centerX" id="U0f-Aa-udm"/>
                             <constraint firstItem="5Tl-rX-qcr" firstAttribute="centerX" secondItem="V6f-vG-bLV" secondAttribute="centerX" id="Vmi-Nm-Rfc"/>
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="top" secondItem="EK2-37-H8B" secondAttribute="bottom" constant="8" id="Ydc-5s-CNK"/>
                             <constraint firstItem="V6f-vG-bLV" firstAttribute="width" secondItem="EK2-37-H8B" secondAttribute="width" multiplier="0.57971" id="af5-Z2-D6b"/>
@@ -122,8 +139,9 @@
                             <constraint firstItem="5Tl-rX-qcr" firstAttribute="centerY" secondItem="V6f-vG-bLV" secondAttribute="centerY" id="iNg-GO-1Cd"/>
                             <constraint firstItem="fIk-VB-jNF" firstAttribute="top" secondItem="6fH-Ad-fQg" secondAttribute="bottom" constant="25" id="ijY-5z-u5P"/>
                             <constraint firstItem="EmB-va-v79" firstAttribute="width" secondItem="mof-9A-9Sc" secondAttribute="width" id="kkX-3z-hz7"/>
-                            <constraint firstItem="wJ8-3p-pFR" firstAttribute="trailing" secondItem="I4q-aG-EWV" secondAttribute="trailing" constant="1" id="kzS-7H-jQE"/>
                             <constraint firstItem="6fH-Ad-fQg" firstAttribute="width" secondItem="mof-9A-9Sc" secondAttribute="width" multiplier="0.9" id="pgK-NV-KBq"/>
+                            <constraint firstItem="iP4-5C-kZc" firstAttribute="centerY" secondItem="Y7Y-WL-ddn" secondAttribute="centerY" id="tJD-WX-4dz"/>
+                            <constraint firstItem="I4q-aG-EWV" firstAttribute="centerY" secondItem="Y7Y-WL-ddn" secondAttribute="centerY" id="uG8-fu-8Bo"/>
                             <constraint firstItem="I4q-aG-EWV" firstAttribute="width" secondItem="iP4-5C-kZc" secondAttribute="width" id="xQz-aV-c2l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wJ8-3p-pFR"/>
@@ -131,6 +149,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="EK2-37-H8B" id="OSw-8p-KFP"/>
                         <outlet property="idLAbel" destination="hTx-ba-fNW" id="vr1-nS-LgU"/>
+                        <outlet property="moreInfoButton" destination="Y7Y-WL-ddn" id="CYf-lK-eoR"/>
                         <outlet property="nameLabel" destination="6fH-Ad-fQg" id="1dg-Nx-acD"/>
                         <outlet property="nextButton" destination="I4q-aG-EWV" id="67L-2O-rst"/>
                         <outlet property="pokeSearchBar" destination="EmB-va-v79" id="0IA-xU-8Lf"/>
@@ -146,8 +165,47 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
         </scene>
+        <!--Pokemon Detail Table View Controller-->
+        <scene sceneID="XNp-DR-67K">
+            <objects>
+                <tableViewController id="5za-xN-lu2" customClass="PokemonDetailTableViewController" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ewR-LN-akC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokeCell" textLabel="qXc-cq-cIF" rowHeight="115" style="IBUITableViewCellStyleDefault" id="fvU-hz-oNe">
+                                <rect key="frame" x="0.0" y="28" width="414" height="115"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fvU-hz-oNe" id="k4r-GG-hPf">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qXc-cq-cIF">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5za-xN-lu2" id="tTo-mp-qKT"/>
+                            <outlet property="delegate" destination="5za-xN-lu2" id="DS4-Io-8yy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Cho-tZ-Ekc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uv7-3n-8SH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.92753623188412" y="18.75"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Pokedex" width="630" height="630"/>
+        <image name="pokeball" width="225" height="225"/>
     </resources>
 </document>

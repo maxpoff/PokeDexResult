@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonViewController: UIViewController {
     
-    //MARK: Outlets
+    //MARK: -Outlets
     @IBOutlet weak var pokeSearchBar: UISearchBar!
     @IBOutlet weak var spriteImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,6 +22,7 @@ class PokemonViewController: UIViewController {
     @IBOutlet weak var populateID: UILabel!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var moreInfoButton: UIButton!
     
     var pokemon: Pokemon?
     var isShiny = false
@@ -32,6 +33,7 @@ class PokemonViewController: UIViewController {
         designNextButton()
         designPreviousButton()
         pokeSearchBar.delegate = self
+        hideButtons()
     }
     
     //MARK: Actions
@@ -82,7 +84,7 @@ class PokemonViewController: UIViewController {
         }
     }
     
-    //MARK: Private Methods
+    //MARK: -Private Methods
     
     private func fetchSpriteAndUpdateViews(for pokemon: Pokemon) {
         
@@ -151,10 +153,30 @@ class PokemonViewController: UIViewController {
         previousButton.setTitleColor(.black, for: .normal)
         previousButton.setTitle("Previous Pokemon", for: .normal)
     }
-
+    
+    func hideButtons() {
+        moreInfoButton.isHidden = true
+        previousButton.isHidden = true
+        nextButton.isHidden = true
+    }
+    
+    func showButtons() {
+        moreInfoButton.isHidden = false
+        previousButton.isHidden = false
+        nextButton.isHidden = false
+    }
+    
+    //MARK: -Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            guard let destinationVC = segue.destination as? PokemonDetailTableViewController else {return}
+            destinationVC.pokemon = pokemon
+        }
+    }
 }//End of class
 
-//MARK: - UISearchBar Delegate
+//MARK: -UISearchBar Delegate
 
 extension PokemonViewController: UISearchBarDelegate {
     
@@ -170,6 +192,7 @@ extension PokemonViewController: UISearchBarDelegate {
                     self.fetchSpriteAndUpdateViews(for: pokemon)
                     self.pokemon = pokemon
                     searchBar.text = ""
+                    self.showButtons()
                 case .failure(let error):
                     self.presentErrorToUser(localizedError: error)
                 }
