@@ -24,10 +24,12 @@ class PokemonViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var moreInfoButton: UIButton!
     
+    //MARK: - Properties
     var pokemon: Pokemon?
     var isShiny = false
     var idNumber: Int?
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         designNextButton()
@@ -85,7 +87,6 @@ class PokemonViewController: UIViewController {
     }
     
     //MARK: -Private Methods
-    
     private func fetchSpriteAndUpdateViews(for pokemon: Pokemon) {
         
         PokemonController.fetchSprite(for: pokemon) { (result) in
@@ -167,7 +168,6 @@ class PokemonViewController: UIViewController {
     }
     
     //MARK: -Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC" {
             guard let destinationVC = segue.destination as? PokemonDetailTableViewController else {return}
@@ -177,7 +177,6 @@ class PokemonViewController: UIViewController {
 }//End of class
 
 //MARK: -UISearchBar Delegate
-
 extension PokemonViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -192,6 +191,8 @@ extension PokemonViewController: UISearchBarDelegate {
                     self.fetchSpriteAndUpdateViews(for: pokemon)
                     self.pokemon = pokemon
                     searchBar.text = ""
+                    searchBar.resignFirstResponder()
+                    self.resignFirstResponder()
                     self.showButtons()
                 case .failure(let error):
                     self.presentErrorToUser(localizedError: error)

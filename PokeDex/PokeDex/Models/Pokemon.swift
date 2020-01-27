@@ -14,6 +14,7 @@ struct Pokemon: Decodable {
     let id: Int
     let sprites: Sprites
     let typeArray: [Types]
+    let gameIndicesArray: [GameIndices]
     var detailArray: [String] {
         var placeholderArray: [String] = []
         placeholderArray.append("ID: \(id)")
@@ -22,6 +23,7 @@ struct Pokemon: Decodable {
                 placeholderArray.append("Type: \(type.type.name.capitalizingFirstLetter())")
             }
         }
+        placeholderArray.append("Appears in Games...")
         return placeholderArray
     }
     
@@ -29,6 +31,7 @@ struct Pokemon: Decodable {
         case name
         case id
         case sprites
+        case gameIndicesArray = "game_indices"
         case typeArray = "types"
     }//End of enum
     
@@ -52,6 +55,14 @@ struct Pokemon: Decodable {
     
     struct pokemonType: Decodable {
         let name: String
+    }//End of struct
+    
+    struct GameIndices: Decodable {
+        var version: GameName
+    }//End of struct
+    
+    struct GameName: Decodable {
+        var name: String
     }//End of struct
     
 }//End of struct

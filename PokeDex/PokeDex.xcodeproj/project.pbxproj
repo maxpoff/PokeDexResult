@@ -19,6 +19,7 @@
 		97196C9823D788C100EEE6FD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196C9723D788C100EEE6FD /* UIViewControllerExtension.swift */; };
 		97196C9A23D7CB6D00EEE6FD /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196C9923D7CB6D00EEE6FD /* StringFormatter.swift */; };
 		97196CD623D8F3CD00EEE6FD /* PokemonDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97196CD523D8F3CD00EEE6FD /* PokemonDetailTableViewController.swift */; };
+		97DAF3F123DA951800F1BF1F /* GamesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DAF3F023DA951800F1BF1F /* GamesDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		97196C9723D788C100EEE6FD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		97196C9923D7CB6D00EEE6FD /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
 		97196CD523D8F3CD00EEE6FD /* PokemonDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailTableViewController.swift; sourceTree = "<group>"; };
+		97DAF3F023DA951800F1BF1F /* GamesDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		97196C8A23D769F000EEE6FD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				97DAF3F023DA951800F1BF1F /* GamesDetailTableViewController.swift */,
 				97196CD523D8F3CD00EEE6FD /* PokemonDetailTableViewController.swift */,
 				97196C9423D784E800EEE6FD /* PokemonViewController.swift */,
 				97196C8C23D76A0200EEE6FD /* Custom Views */,
@@ -226,6 +229,7 @@
 				97196C9523D784E800EEE6FD /* PokemonViewController.swift in Sources */,
 				97196C8F23D76C8C00EEE6FD /* Pokemon.swift in Sources */,
 				97196C9A23D7CB6D00EEE6FD /* StringFormatter.swift in Sources */,
+				97DAF3F123DA951800F1BF1F /* GamesDetailTableViewController.swift in Sources */,
 				97196C9123D7736B00EEE6FD /* PokemonController.swift in Sources */,
 				97196C9823D788C100EEE6FD /* UIViewControllerExtension.swift in Sources */,
 				97196C9323D7748300EEE6FD /* PokemonError.swift in Sources */,
